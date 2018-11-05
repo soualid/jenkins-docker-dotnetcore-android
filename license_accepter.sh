@@ -22,7 +22,17 @@ accept_all_android_licenses() {
   fi
   accept_license_of android-sdk-license 8933bad161af4178b1185d1a37fbf41ea5269c55
   accept_license_of android-sdk-license d56f5187479451eabf01fb78af6dfcb131a6481e
+  accept_license_of android-sdk-license 24333f8a63b6825ea9c5514f83c2829b004d1fee
+
   accept_license_of android-sdk-preview-license 84831b9409646a918e30573bab4c9c91346d8abd
+  accept_license_of android-sdk-preview-license d23d63a1f23e25e2c7a316e29eb60396e7924281
+  
+  accept_license_of mips-android-sysimage-license e0c19d95f989716a8960e651953886c9fc1f8c0a
+  
+  accept_license_of android-googletv-license 2f0d1357ae7b730389d07594f0e9b502cc6fe51f
+
+  accept_license_of google-gdk-license 33b6a2b64607f11b759f320ef9dff4ae5c47d97a
+
   accept_license_of intel-android-extra-license d975f751698a77b662f1254ddbeed3901e976f5a
 }
 
