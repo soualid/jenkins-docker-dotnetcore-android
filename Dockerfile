@@ -1,4 +1,4 @@
-FROM tat2bu/jenkins-docker-dotnetcore
+FROM tat2bu/jenkins-docker-dotnetcore:latest
 RUN cat /etc/apt/sources.list && apt-get update && apt-get install --assume-yes apt-utils
 RUN apt-get install -y apt-utils lib32stdc++6 lib32z1 build-essential file
 ENV ANDROID_SDK_VERSION 3859397
