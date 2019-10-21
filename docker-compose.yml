@@ -1,0 +1,30 @@
+version: '2'
+services:
+  jenkins:
+    image: roberto/docker-jenkins-dind
+    privileged: true
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      - DOCKER_REGISTRY_CERT=/certs/registry.crt
+      - DOCKER_REGISTRY_NAME=registry:5000
+    volumes:
+      - jenkins-data:/var/lib/jenkins
+      - privateregistry_registry-certs:/certs
+    external_links:
+      - privateregistry_registry_1:registry
+
+
+volumes:
+  jenkins-data:
+    driver: local
+
+  privateregistry_registry-certs:
+    external: true
+
+
+networks:
+  default:
+    external:
+      name: privateregistry_default
